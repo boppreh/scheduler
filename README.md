@@ -22,7 +22,7 @@ only duration and due date. The basic format is:
 
 `write example task.txt`
 
-`15 minutes due next Friday'
+`15 minutes due next Friday`
 
 When running, *scheduler* automatically finds a time slot for this task and
 notifies you when it's time to start it.
@@ -35,13 +35,13 @@ Natural Language
 
 Event examples:
 
-- 'every weekday except Friday from 2 pm to 6 pm'
-- 'next Tuesday 21:00 to 22:00'
-- 'March 23 from 11 pm to 2 am'
+- `every weekday except Friday from 2 pm to 6 pm`
+- `next Tuesday 21:00 to 22:00`
+- `March 23 from 11 pm to 2 am`
 
 
 Task examples:
 
-- '15 minutes due next Friday'
-- '2 hours due March 23'
-- '30 seconds due tomorrow'
+- `15 minutes due next Friday`
+- `2 hours due March 23`
+- `30 seconds due tomorrow`
