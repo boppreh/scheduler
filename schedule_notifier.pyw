@@ -3,7 +3,7 @@ from win32api import *
 from win32gui import *
 from win32con import *
 import win32ui
-import sys, os
+import os
 import subprocess
 from datetime import datetime, timedelta
 from time import sleep
@@ -94,6 +94,7 @@ if __name__ == '__main__':
         exit()
 
     from background import tray, quit, notify
+    from simpleserver import serve
 
     def restart():
         this_path = os.path.join(os.getcwd(), __file__)
@@ -104,6 +105,7 @@ if __name__ == '__main__':
         win32ui.MessageBox(get_events_list(events), 'Next events', 0)
 
     tray('Schedule Notifier', 'calendar.ico', [show_next_events, restart, quit])
+    serve({}, port=2340)
 
     # Wait for the tray icon to be ready, in case there's an event right now.
     sleep(1)
