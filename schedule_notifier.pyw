@@ -105,7 +105,7 @@ if __name__ == '__main__':
         win32ui.MessageBox(get_events_list(events), 'Next events', 0)
 
     tray('Schedule Notifier', 'calendar.ico', [show_next_events, restart, quit])
-    serve({}, port=2340)
+    serve(lambda: events[10], port=2340)
 
     # Wait for the tray icon to be ready, in case there's an event right now.
     sleep(1)
