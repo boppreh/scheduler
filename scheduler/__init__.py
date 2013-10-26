@@ -2,8 +2,8 @@
 Module for reading and arranging a schedule based on a user-created directory.
 """
 
-from scheduler import schedule
-from event_reader import read_events
+from .scheduler import schedule
+from .event_reader import read_events
 
 def get_full_schedule(directory='../events/', max_date=None):
     """ Returns the scheduled events from a given directory. """
@@ -13,4 +13,4 @@ def get_full_schedule(directory='../events/', max_date=None):
     return events
 
 if __name__ == '__main__':
-    print '\n'.join(map(str, get_full_schedule()))
+    print('\n'.join(map(str, get_full_schedule())))

@@ -93,7 +93,7 @@ if __name__ == '__main__':
     if not events:
         exit()
 
-    from background import tray, quit, notify
+    from tray import tray, quit, notify
     from simpleserver import serve
 
     def restart():
@@ -104,7 +104,7 @@ if __name__ == '__main__':
     def show_next_events():
         win32ui.MessageBox(get_events_list(events), 'Next events', 0)
 
-    tray('Schedule Notifier', 'calendar.ico', [show_next_events, restart, quit])
+    tray('Schedule Notifier', 'calendar-list.png', [show_next_events, restart, quit])
     serve(lambda: events[10], port=2340)
 
     # Wait for the tray icon to be ready, in case there's an event right now.

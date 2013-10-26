@@ -2,7 +2,7 @@
 Module for reading a list of events from a directory.
 """
 from datetime import timedelta, datetime
-from event_parser import create_events
+from .event_parser import create_events
 from os import walk, stat
 from os.path import splitext, join
 
